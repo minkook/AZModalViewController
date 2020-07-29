@@ -70,6 +70,10 @@
             [self.view addSubview:self.dismissDragImageView];
             [self.dismissDragImageView sendSubviewToBack:self.view];
             
+            if (self.delegate && [self.delegate respondsToSelector:@selector(willPullDownGestureTouchPoint:)]) {
+                [self.delegate willPullDownGestureTouchPoint:self.touchBeginPoint];
+            }
+            
         }
             break;
             
@@ -93,6 +97,11 @@
             
             BOOL dismiss = self.dismissDragImageView.transform.ty > CGRectGetHeight(self.view.bounds) * self.limitRatioFromViewHeight;
             
+            if (self.delegate && [self.delegate respondsToSelector:@selector(didPullDownGestureTouchPoint:)]) {
+                CGPoint touchPt = [recognizer locationInView:self.view];
+                [self.delegate didPullDownGestureTouchPoint:touchPt];
+            }
+            
             [self animateDismissPanGesture:dismiss];
             
         }
@@ -110,6 +119,10 @@
     __weak typeof(self) weakSelf = self;
     
     if (dismiss) {
+        
+        if (self.delegate && [self.delegate respondsToSelector:@selector(willDismissModalViewController)]) {
+            [self.delegate willDismissModalViewController];
+        }
         
         CGFloat ty = CGRectGetHeight(self.view.bounds);
         

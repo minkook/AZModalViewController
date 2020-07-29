@@ -10,13 +10,33 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AZModalViewController : UIViewController
 
+@class AZModalViewController;
+
+@protocol AZModalViewControllerDelegate < NSObject >
+
+@optional
+
+- (void)willPullDownGestureTouchPoint:(CGPoint)touchPoint;
+- (void)didPullDownGestureTouchPoint:(CGPoint)touchPoint;
+
+- (void)willDismissModalViewController;
+
+@end
+
+
+
+@interface AZModalViewController : UIViewController
 
 /// default 0.5. ( 0  ~  1 ).
 @property (nonatomic, assign) CGFloat limitRatioFromViewHeight;
 
 
+@property (nonatomic, weak, nullable) id <AZModalViewControllerDelegate> delegate;
+
+
 @end
+
+
 
 NS_ASSUME_NONNULL_END
