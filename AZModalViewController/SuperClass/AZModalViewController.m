@@ -62,11 +62,11 @@
             self.savedBackgroundColor = self.view.backgroundColor;
             self.view.backgroundColor = UIColor.clearColor;
             
-            CGFloat viewTranslationY = CGRectGetWidth(self.view.bounds) * 2;
-            self.view.transform = CGAffineTransformMakeTranslation(viewTranslationY, 0);
+            CGFloat viewTranslationX = CGRectGetWidth(self.view.bounds) * 2;
+            self.view.transform = CGAffineTransformMakeTranslation(viewTranslationX, 0);
             
             self.dismissDragImageView = [[UIImageView alloc] initWithImage:image];
-            self.dismissDragImageView.frame = CGRectMake(-viewTranslationY, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds));
+            self.dismissDragImageView.frame = CGRectMake(-viewTranslationX, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds));
             [self.view addSubview:self.dismissDragImageView];
             [self.dismissDragImageView sendSubviewToBack:self.view];
             
@@ -128,7 +128,7 @@
         
         [UIView animateWithDuration:0.2 animations:^{
             
-            weakSelf.dismissDragImageView.transform = CGAffineTransformMakeTranslation(0, ty);;
+            weakSelf.dismissDragImageView.transform = CGAffineTransformMakeTranslation(0, ty);
             
         } completion:^(BOOL finished) {
             
