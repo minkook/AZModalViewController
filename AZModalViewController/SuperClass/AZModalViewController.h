@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AZModalViewController : UIViewController
 
+
+/// default 0.5. ( 0  ~  1 ).
+@property (nonatomic, assign) CGFloat limitRatioFromViewHeight;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

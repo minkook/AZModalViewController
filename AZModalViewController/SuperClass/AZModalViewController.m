@@ -26,6 +26,7 @@
     
     if (self) {
         self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        self.limitRatioFromViewHeight = 0.5;
     }
     
     return self;
@@ -90,7 +91,7 @@
             
             self.touchBeginPoint = CGPointZero;
             
-            BOOL dismiss = self.dismissDragImageView.transform.ty > CGRectGetHeight(self.view.bounds) * 1 / 2;
+            BOOL dismiss = self.dismissDragImageView.transform.ty > CGRectGetHeight(self.view.bounds) * self.limitRatioFromViewHeight;
             
             [self animateDismissPanGesture:dismiss];
             
