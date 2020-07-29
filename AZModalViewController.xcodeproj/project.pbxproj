@@ -14,6 +14,8 @@
 		4D49CC0A24D107FF00E64A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D49CC0924D107FF00E64A04 /* Assets.xcassets */; };
 		4D49CC0D24D107FF00E64A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D49CC0B24D107FF00E64A04 /* LaunchScreen.storyboard */; };
 		4D49CC1024D107FF00E64A04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49CC0F24D107FF00E64A04 /* main.m */; };
+		4D49CC1924D108B100E64A04 /* AZModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49CC1824D108B100E64A04 /* AZModalViewController.m */; };
+		4D49CC1C24D10A1500E64A04 /* SubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49CC1B24D10A1500E64A04 /* SubViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		4D49CC0C24D107FF00E64A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D49CC0E24D107FF00E64A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D49CC0F24D107FF00E64A04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4D49CC1724D108B100E64A04 /* AZModalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AZModalViewController.h; sourceTree = "<group>"; };
+		4D49CC1824D108B100E64A04 /* AZModalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AZModalViewController.m; sourceTree = "<group>"; };
+		4D49CC1A24D10A1500E64A04 /* SubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubViewController.h; sourceTree = "<group>"; };
+		4D49CC1B24D10A1500E64A04 /* SubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +67,15 @@
 		4D49CBFC24D107FE00E64A04 /* AZModalViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4D49CC1624D1089500E64A04 /* SuperClass */,
 				4D49CBFD24D107FE00E64A04 /* AppDelegate.h */,
 				4D49CBFE24D107FE00E64A04 /* AppDelegate.m */,
 				4D49CC0024D107FE00E64A04 /* SceneDelegate.h */,
 				4D49CC0124D107FE00E64A04 /* SceneDelegate.m */,
 				4D49CC0324D107FE00E64A04 /* ViewController.h */,
 				4D49CC0424D107FE00E64A04 /* ViewController.m */,
+				4D49CC1A24D10A1500E64A04 /* SubViewController.h */,
+				4D49CC1B24D10A1500E64A04 /* SubViewController.m */,
 				4D49CC0624D107FE00E64A04 /* Main.storyboard */,
 				4D49CC0924D107FF00E64A04 /* Assets.xcassets */,
 				4D49CC0B24D107FF00E64A04 /* LaunchScreen.storyboard */,
@@ -74,6 +83,15 @@
 				4D49CC0F24D107FF00E64A04 /* main.m */,
 			);
 			path = AZModalViewController;
+			sourceTree = "<group>";
+		};
+		4D49CC1624D1089500E64A04 /* SuperClass */ = {
+			isa = PBXGroup;
+			children = (
+				4D49CC1724D108B100E64A04 /* AZModalViewController.h */,
+				4D49CC1824D108B100E64A04 /* AZModalViewController.m */,
+			);
+			path = SuperClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D49CC1924D108B100E64A04 /* AZModalViewController.m in Sources */,
 				4D49CC0524D107FE00E64A04 /* ViewController.m in Sources */,
 				4D49CBFF24D107FE00E64A04 /* AppDelegate.m in Sources */,
+				4D49CC1C24D10A1500E64A04 /* SubViewController.m in Sources */,
 				4D49CC1024D107FF00E64A04 /* main.m in Sources */,
 				4D49CC0224D107FE00E64A04 /* SceneDelegate.m in Sources */,
 			);
